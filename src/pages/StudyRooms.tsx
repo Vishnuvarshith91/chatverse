@@ -17,6 +17,7 @@ import DocumentSummarizer from '../components/AI/DocumentSummarizer';
 import VideoSummarizer from '../components/AI/VideoSummarizer';
 import MindMapGenerator from '../components/AI/MindMapGenerator';
 import CreateChatRoom from './CreateChatRoom';
+import ChatRoom from './ChatRoom';
 
 const StudyRoomsList: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -307,7 +308,7 @@ const StudyRooms: React.FC = () => {
     <Routes>
       <Route index element={<StudyRoomsList />} />
       <Route path="create" element={<CreateChatRoom />} />
-      <Route path=":id" element={<div>Study Room Detail Page</div>} />
+      <Route path=":id" element={<ChatRoom />} />
     </Routes>
   );
 };
