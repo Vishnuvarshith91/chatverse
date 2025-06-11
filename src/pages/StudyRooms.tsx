@@ -305,11 +305,13 @@ const StudyRoomsList: React.FC = () => {
 
 const StudyRooms: React.FC = () => {
   return (
-    <Routes>
-      <Route index element={<StudyRoomsList />} />
-      <Route path="create" element={<CreateChatRoom />} />
-      <Route path=":id" element={<ChatRoom />} />
-    </Routes>
+    <div className="min-h-full">
+      <Routes>
+        <Route index element={<StudyRoomsList />} />
+        <Route path="create" element={<CreateChatRoom />} />
+        <Route path=":id" element={<ChatRoom />} />
+      </Routes>
+    </div>
   );
 };
 
